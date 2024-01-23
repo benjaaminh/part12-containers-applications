@@ -1,0 +1,92 @@
+Script started on 2024-01-23 19:56:24+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="116" LINES="19"]
+[?2004h]0;benjamin@benjaminpc: /mnt/c/Users/benja/Desktop/coding/part12-containers-applications[01;32mbenjamin@benjaminpc[00m:[01;34m/mnt/c/Users/benja/Desktop/coding/part12-containers-applications[00m$ docker[K[K[K[K[K[Kdocker run -it ubuntu bash
+[?2004l
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+
+[1A[2K
+29202e855b20: Pulling fs layer 
+[1B[1A[2K
+29202e855b20: Downloading [>                                                  ]  310.6kB/29.55MB
+[1B[1A[2K
+29202e855b20: Downloading [==>                                                ]  1.542MB/29.55MB
+[1B[1A[2K
+29202e855b20: Downloading [=====>                                             ]  3.091MB/29.55MB
+[1B[1A[2K
+29202e855b20: Downloading [=======>                                           ]  4.631MB/29.55MB
+[1B[1A[2K
+29202e855b20: Downloading [==========>                                        ]  6.183MB/29.55MB
+[1B[1A[2K
+29202e855b20: Downloading [=============>                                     ]  8.039MB/29.55MB
+[1B[1A[2K
+29202e855b20: Downloading [================>                                  ]  9.571MB/29.55MB
+[1B[1A[2K
+29202e855b20: Downloading [==================>                                ]  11.12MB/29.55MB
+[1B[1A[2K
+29202e855b20: Downloading [=====================>                             ]  12.67MB/29.55MB
+[1B[1A[2K
+29202e855b20: Downloading [========================>                          ]  14.53MB/29.55MB
+[1B[1A[2K
+29202e855b20: Downloading [===========================>                       ]  16.08MB/29.55MB
+[1B[1A[2K
+29202e855b20: Downloading [=============================>                     ]  17.64MB/29.55MB
+[1B[1A[2K
+29202e855b20: Downloading [================================>                  ]  19.48MB/29.55MB
+[1B[1A[2K
+29202e855b20: Downloading [====================================>              ]  21.34MB/29.55MB
+[1B[1A[2K
+29202e855b20: Downloading [=======================================>           ]   23.2MB/29.55MB
+[1B[1A[2K
+29202e855b20: Downloading [=========================================>         ]  24.75MB/29.55MB
+[1B[1A[2K
+29202e855b20: Downloading [=============================================>     ]  26.62MB/29.55MB
+[1B[1A[2K
+29202e855b20: Downloading [================================================>  ]  28.47MB/29.55MB
+[1B[1A[2K
+29202e855b20: Verifying Checksum 
+[1B[1A[2K
+29202e855b20: Download complete 
+[1B[1A[2K
+29202e855b20: Extracting [>                                                  ]  327.7kB/29.55MB
+[1B[1A[2K
+29202e855b20: Extracting [=========>                                         ]  5.898MB/29.55MB
+[1B[1A[2K
+29202e855b20: Extracting [==============>                                    ]  8.847MB/29.55MB
+[1B[1A[2K
+29202e855b20: Extracting [========================>                          ]  14.75MB/29.55MB
+[1B[1A[2K
+29202e855b20: Extracting [====================================>              ]  21.63MB/29.55MB
+[1B[1A[2K
+29202e855b20: Extracting [===========================================>       ]  25.89MB/29.55MB
+[1B[1A[2K
+29202e855b20: Extracting [================================================>  ]  28.51MB/29.55MB
+[1B[1A[2K
+29202e855b20: Extracting [=================================================> ]  29.16MB/29.55MB
+[1B[1A[2K
+29202e855b20: Extracting [==================================================>]  29.55MB/29.55MB
+[1B[1A[2K
+29202e855b20: Pull complete 
+[1BDigest: sha256:e6173d4dc55e76b87c4af8db8821b1feae4146dd47341e4d431118c7dd060a74
+Status: Downloaded newer image for ubuntu:latest
+[?2004h]0;root@432085e3a40c: /root@432085e3a40c:/# cd 
+.dockerenv  dev/        lib/        libx32/     opt/        run/        sys/        var/        
+bin/        etc/        lib32/      media/      proc/       sbin/       tmp/        
+boot/       home/       lib64/      mnt/        root/       srv/        usr/        
+]0;root@432085e3a40c: /root@432085e3a40c:/# cd 
+.dockerenv  dev/        lib/        libx32/     opt/        run/        sys/        var/        
+bin/        etc/        lib32/      media/      proc/       sbin/       tmp/        
+boot/       home/       lib64/      mnt/        root/       srv/        usr/        
+]0;root@432085e3a40c: /root@432085e3a40c:/# cd  usr/
+[?2004l
+[?2004h]0;root@432085e3a40c: /usrroot@432085e3a40c:/usr# cd src/
+[?2004l
+[?2004h]0;root@432085e3a40c: /usr/srcroot@432085e3a40c:/usr/src# cd app      mkdir app
+[?2004l
+[?2004h]0;root@432085e3a40c: /usr/srcroot@432085e3a40c:/usr/src# cd app/
+[?2004l
+[?2004h]0;root@432085e3a40c: /usr/src/approot@432085e3a40c:/usr/src/app# touch index.js
+[?2004l
+[?2004h]0;root@432085e3a40c: /usr/src/approot@432085e3a40c:/usr/src/app# exit
+[?2004l
+exit
+[?2004h]0;benjamin@benjaminpc: /mnt/c/Users/benja/Desktop/coding/part12-containers-applications[01;32mbenjamin@benjaminpc[00m:[01;34m/mnt/c/Users/benja/Desktop/coding/part1
