@@ -1,0 +1,146 @@
+Script started on 2024-01-24 14:22:05+00:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="91" LINES="12"]
+# apt install -y nodejs
+
+Reading package lists... 0%
+
+Reading package lists... 0%
+
+Reading package lists... 0%
+
+Reading package lists... 5%
+
+Reading package lists... 5%
+
+Reading package lists... 6%
+
+Reading package lists... 6%
+
+Reading package lists... 46%
+
+Reading package lists... 63%
+
+Reading package lists... 63%
+
+Reading package lists... 64%
+
+Reading package lists... 64%
+
+Reading package lists... 70%
+
+Reading package lists... 70%
+
+Reading package lists... 77%
+
+Reading package lists... 77%
+
+Reading package lists... 82%
+
+Reading package lists... 82%
+
+Reading package lists... 82%
+
+Reading package lists... 82%
+
+Reading package lists... 83%
+
+Reading package lists... 83%
+
+Reading package lists... 83%
+
+Reading package lists... 83%
+
+Reading package lists... 88%
+
+Reading package lists... 88%
+
+Reading package lists... 95%
+
+Reading package lists... 95%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... 99%
+
+Reading package lists... Done
+
+
+Building dependency tree... 0%
+
+Building dependency tree... 0%
+
+Building dependency tree... 50%
+
+Building dependency tree... 50%
+
+Building dependency tree... 77%
+
+Building dependency tree... Done
+
+
+Reading state information... 0% 
+
+Reading state information... 2%
+
+Reading state information... Done
+
+The following NEW packages will be installed:
+  nodejs
+0 upgraded, 1 newly installed, 0 to remove and 8 not upgraded.
+Need to get 27.2 MB of archives.
+After this operation, 128 MB of additional disk space will be used.
+[33m
+0% [Working][0m
+            
+Get:1 https://deb.nodesource.com/node_16.x jammy/main amd64 nodejs amd64 16.20.2-deb-1nodesource1 [27.2 MB]
+[33m
+0% [1 nodejs 872 B/27.2 MB 0%][0m[33m
+18% [1 nodejs 6044 kB/27.2 MB 22%][0m[33m
+35% [1 nodejs 11.7 MB/27.2 MB 43%][0m[33m
+53% [1 nodejs 18.1 MB/27.2 MB 67%][0m[33m
+72% [1 nodejs 24.5 MB/27.2 MB 90%][0m[33m
+                                  
+100% [Working][0m
+              
+Fetched 27.2 MB in 2s (11.3 MB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+
+7[0;11r8[1ASelecting previously unselected package nodejs.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 6039 files and directories currently installed.)
+Preparing to unpack .../nodejs_16.20.2-deb-1nodesource1_amd64.deb ...
+7[12;0f[42m[30mProgress: [  0%][49m[39m [.....................................................................] 87[12;0f[42m[30mProgress: [ 20%][49m[39m [#############........................................................] 8Unpacking nodejs (16.20.2-deb-1nodesource1) ...
+7[12;0f[42m[30mProgress: [ 40%][49m[39m [###########################..........................................] 8Setting up nodejs (16.20.2-deb-1nodesource1) ...
+7[12;0f[42m[30mProgress: [ 60%][49m[39m [#########################################............................] 87[12;0f[42m[30mProgress: [ 80%][49m[39m [#######################################################..............] 8
+7[0;12r8[1A[J# ^[[A^[[A        node /usr/src/app/index.js
+Hello World
+# exit
+
+Script done on 2024-01-24 14:23:11+00:00 [COMMAND_EXIT_CODE="0"]
