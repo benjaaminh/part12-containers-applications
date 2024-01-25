@@ -1,0 +1,101 @@
+Script started on 2024-01-25 13:21:59+02:00 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="132" LINES="14"]
+[?2004h]0;benjamin@benjaminpc: /mnt/c/Users/benja/Desktop/coding/part12-containers-applications[01;32mbenjamin@benjaminpc[00m:[01;34m/mnt/c/Users/benja/Desktop/coding/part12-containers-applications[00m$ docker container ls
+[?2004l
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                     NAMES
+68ea86edb66c   mongo     "docker-entrypoint.s…"   57 seconds ago   Up 56 seconds   0.0.0.0:3456->27017/tcp   todo-backend-mongo-1
+[?2004h]0;benjamin@benjaminpc: /mnt/c/Users/benja/Desktop/coding/part12-containers-applications[01;32mbenjamin@benjaminpc[00m:[01;34m/mnt/c/Users/benja/Desktop/coding/part12-containers-applications[00m$ dockerd[Ke [K[K exec -it todo_[K-backed[Knd:_[K[K.[K-mondo-1[K[K[K[Kgo-1 bash
+[?2004l
+[?2004hroot@68ea86edb66c:/# mongosh
+[?2004l
+]0;mongosh mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	65b244871cffb8a5947f2bc1
+Connecting to:		[1m[32mmongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.1[0m
+Using MongoDB:		7.0.5
+[1m[33mUsing Mongosh[0m:		2.1.1
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the [1mdisableTelemetry()[0m command.
+
+[1G[0J [1G[1G[0Jtest> [7Gexit
+
+[?2004hroot@68ea86edb66c:/# mongosh -u -r  root -p   examl 
+[12P(arg: 1) mongosh -u root -p 
+(arg: 4) mongosh -u root -p 
+[12@root@68ea86edb66c:/# mongosh -u root -p [4@pppp[1@le[1@e[1Pexa[1Pm[1Pm[1Pm[1Pm[1Pm[1Pm[1Pm[1Pm[1Pmm  example
+[?2004l
+]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	65b244b1dad8f067520ba4fc
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.1[0m
+Using MongoDB:		7.0.5
+[1m[33mUsing Mongosh[0m:		2.1.1
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+[1G[0J [1G[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2024-01-25T11:21:11.340+00:00: /sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'
+   2024-01-25T11:21:11.341+00:00: vm.max_map_count is too low
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshoiw[1G[0Jtest> shoi[11G[1G[0Jtest> sho[10Gw dbs
+
+[1madmin[0m         100.00 KiB
+[1mconfig[0m        108.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   56.00 KiB
+[1G[0Jtest> [7Guse the_database
+
+switched to db the_database
+[1G[0Jthe_database> [15Gshow collections
+
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.todos.find({][1G[0Jthe_database> db.todos.find({[30G})
+
+[
+  {
+    _id: ObjectId([32m'65b23a6ce50ce9863a6ba8d5'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'65b23a6ce50ce9863a6ba8d6'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mtrue[39m
+  }
+]
+[1G[0Jthe_database> [15Gb[1G[0Jthe_database> [15Gdb.insertOne([1G[0Jthe_database> db.insertOne[27G[1G[0Jthe_database> db.insertOn[26G[1G[0Jthe_database> db.insertO[25G[1G[0Jthe_database> db.insert[24G[1G[0Jthe_database> db.inser[23G[1G[0Jthe_database> db.inse[22G[1G[0Jthe_database> db.ins[21G[1G[0Jthe_database> db.in[20G[1G[0Jthe_database> db.i[19G[1G[0Jthe_database> db.[18Gtodos.insertOne({text[33mtext[39m:[32m"[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32mb[39m[32me[39m[32ml[39m[32mt[39m[32m"[39m, d[36mdo[39mdone:fals[33mfalse[39m)[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m:[32m"Increase the number of tools in my toolbelt"[39m, [33mdone[39m:[33mfalse[39m[97G})
+
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId([32m'65b2450edad8f067520ba4fd'[39m)
+}
+[1G[0Jthe_database> [15Gdb.todos.find({][1G[0Jthe_database> db.todos.find({[30G})
+
+[
+  {
+    _id: ObjectId([32m'65b23a6ce50ce9863a6ba8d5'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'65b23a6ce50ce9863a6ba8d6'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'65b2450edad8f067520ba4fd'[39m),
+    text: [32m'Increase the number of tools in my toolbelt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gexit
+
+[?2004hroot@68ea86edb66c:/# exit
+[?2004l
+exit
+[?2004h]0;benjamin@benjaminpc: /mnt/c/Users/benja/Desktop/coding/part12-containers-applications[01;32mbenjamin@benjaminpc[00m:[01;34m/mnt/c/Users/benja/Desktop/coding/part12-containers-applications[00m$ exit
+[?2004l
+exit
+
+Script done on 2024-01-25 13:25:44+02:00 [COMMAND_EXIT_CODE="0"]
