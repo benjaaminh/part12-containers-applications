@@ -1,7 +1,7 @@
 const express = require('express');
 const logger = require('morgan');
 const cors = require('cors');
-
+require ("dotenv").config(); //need to use env variable
 const indexRouter = require('./routes/index');
 const todosRouter = require('./routes/todos');
 

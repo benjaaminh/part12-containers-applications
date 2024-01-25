@@ -29,18 +29,27 @@ const findByIdMiddleware = async (req, res, next) => {
 
 /* DELETE todo. */
 singleRouter.delete('/', async (req, res) => {
-  await req.todo.delete()  
+  await req.todo.delete()
   res.sendStatus(200);
 });
 
 /* GET todo. */
 singleRouter.get('/', async (req, res) => {
-  res.sendStatus(405); // Implement this
+  const todo = req.todo
+  res.json(todo)
 });
 
 /* PUT todo. */
 singleRouter.put('/', async (req, res) => {
-  res.sendStatus(405); // Implement this
+  const body = req.body;
+  const todo = {
+    //not including id, since we cant update it (immutable)
+    text: body.text,
+    done: body.done,
+  }
+
+  const updatedTodo= await Todo.findByIdAndUpdate(req.todo._id,todo,{new:true})//id is found from req.todo._id
+  res.status(200).json(updatedTodo)
 });
 
 router.use('/:id', findByIdMiddleware, singleRouter)

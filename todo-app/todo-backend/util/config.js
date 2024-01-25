@@ -1,4 +1,4 @@
-const MONGO_URL = process.env.MONGO_URL || undefined
+const MONGO_URL = process.env.MONGO_URL || undefined //takes mongo url from .env file
 const REDIS_URL = process.env.REDIS_URL || undefined
 
 module.exports = {
