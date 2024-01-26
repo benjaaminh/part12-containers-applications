@@ -8,8 +8,8 @@ WORKDIR /usr/src/app
 COPY . .
 
 #npm ci is safer than install, doesnt update dependencies
-RUN npm ci
-
+RUN npm ci --only=production 
+#production mode
 FROM build-stage AS test-stage
 RUN CI=true npm test
 
