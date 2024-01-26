@@ -10,6 +10,9 @@ COPY . .
 #npm ci is safer than install, doesnt update dependencies
 RUN npm ci
 
+FROM build-stage AS test-stage
+RUN CI=true npm test
+
 ENV REACT_APP_BACKEND_URL="http://localhost:3000"
 #run file
 RUN npm run build
@@ -19,4 +22,4 @@ RUN npm run build
 FROM nginx:1.20-alpine
 # COPY the directory build from build-stage to /usr/share/nginx/html
 # The target location here was found from the Docker hub page
-COPY --from=build-stage /usr/src/app/build /usr/share/nginx/html
+COPY --from=test-stage /usr/src/app/build /usr/share/nginx/html
