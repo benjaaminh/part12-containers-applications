@@ -9,6 +9,8 @@ services:
     container_name: todo-front-dev # This will name the container hello-front-dev
     environment:
       - REACT_BACKEND_URL=http://localhost:8080/api
+      - WDS_SOCKET_PORT=0 #enables hot reload
+      - WATCHPACK_POLLING=true #enables hot reload
     depends_on:
       - server
   nginx:

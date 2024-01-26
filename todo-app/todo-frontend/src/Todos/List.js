@@ -6,8 +6,8 @@ const TodoList = ({ todos, deleteTodo, completeTodo }) => {
 
   return (
     <>
-      {todos.map(todo => 
-    <Todo key={todo} todo={todo} deleteTodo={deleteTodo} completeTodo={completeTodo}/>
+      {todos.map((todo,index) => 
+    <Todo key={index} todo={todo} deleteTodo={deleteTodo} completeTodo={completeTodo}/>
       ).reduce((acc, cur) => [...acc, <hr />, cur], [])}
     </>
   )
