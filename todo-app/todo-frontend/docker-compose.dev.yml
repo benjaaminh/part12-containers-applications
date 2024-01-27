@@ -8,4 +8,7 @@ services:
       - ./:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
     ports:
       - 3000:3000
+    environment:
+      - WDS_SOCKET_PORT=0 #enables hot reload
+      - WATCHPACK_POLLING=true #enables hot reload
     container_name: todo-front-dev # This will name the container hello-front-dev
