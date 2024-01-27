@@ -1,0 +1,33 @@
+services:
+  app:
+    image: phonebook-front
+    build:
+      context: ./frontend # build in todo-frontend
+      dockerfile: Dockerfile # This will simply tell which dockerfile to read
+    volumes:
+      - ./frontend:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
+    container_name: phonebook-front # This will name the container hello-front-dev
+    depends_on:
+      - server
+    ports:
+      - 3000:3000
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro #read only
+    ports:
+      - 8080:80
+    container_name: reverse-proxy
+    depends_on:
+      - app # wait for the frontend container to be started
+      - server # wait for backend
+  server:
+    image: phonebook-backend
+    build:
+      context: ./backend # The context will pick this directory as the "build context"
+      dockerfile: Dockerfile # This will simply tell which dockerfile to read
+    volumes:
+      - ./backend:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
+    container_name: phonebook-backend # This will name the container hello-front-dev
+    ports:
+      - 3001:3001
